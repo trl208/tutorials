@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: dgs-example-java
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  output:
+    ansi:
+      enabled: always
+
+logging:
+  level:
+    io.micrometer.core.instrument.logging.*: true
