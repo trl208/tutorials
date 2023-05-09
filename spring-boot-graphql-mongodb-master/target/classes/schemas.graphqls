@@ -1,0 +1,24 @@
+schema {
+    query: Query
+}
+
+type Query {
+    users(first: Int, offset: Int): [User]
+    user(id: String!): User
+}
+
+type User {
+    id: String
+    name: String
+    age: Int
+    nationality: String
+    createdAt: String
+    friends(first: Int, offset: Int): [User]
+    articles(first: Int, offset: Int): [Article]
+}
+
+type Article {
+    id: String
+    title: String
+    minutesRead: Int
+}
